@@ -21,4 +21,27 @@ public class HomePage extends BasePage {
         click(bookStore,0,500);
         return new SidePanel(driver, wait);
     }
+
+    @FindBy(css = ".top-card:nth-child(3)")
+    WebElement alertsFrameWindows;
+
+    public SidePanel getAlertsFrameWindows() {
+        click(alertsFrameWindows,0,50);
+        return new SidePanel(driver, wait);
+    }
+    @FindBy(css = ".top-card:nth-child(4)")
+    WebElement widgets;
+
+    public SidePanel getWidgets() {
+        click(widgets,0,50);
+        return new SidePanel(driver, wait);
+    }
+
+    @FindBy(css = ".top-card:nth-child(5)")
+    WebElement interaction;
+
+    public SidePanel getInteractives() {
+        click(interaction,0,50);
+        return new SidePanel(driver, wait);
+    }
 }

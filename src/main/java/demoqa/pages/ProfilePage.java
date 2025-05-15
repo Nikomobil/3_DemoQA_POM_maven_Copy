@@ -13,6 +13,7 @@ public class ProfilePage extends BasePage {
     public ProfilePage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
+
     @FindBy(id = "userName-value")
     WebElement userNameValue;
 
@@ -27,4 +28,21 @@ public class ProfilePage extends BasePage {
 
         return this;
     }
+
+    @FindBy(id = "searchBox")
+    WebElement searchBox;
+
+    public ProfilePage typeKeyInSearchInput(String text) {
+        type(searchBox, text);
+        return this;
+    }
+
+    @FindBy(css = ".mr-2 a")
+    WebElement nameOfBook;
+
+    public ProfilePage verifyNameOfBook(String text) {
+        Assert.assertTrue(shouldHaveText(nameOfBook, text, 5));
+        return this;
+    }
+
 }
