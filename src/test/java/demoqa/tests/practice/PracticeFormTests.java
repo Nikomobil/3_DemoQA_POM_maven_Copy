@@ -20,8 +20,8 @@ public class PracticeFormTests extends TestBase{
     public void createStudentAccountTest(){
         new PracticeFormPage(app.driver, app.wait)
                 .enterPersonalDates("Robert","Smith","kristina@gmail.com","0123456789")
-//                .selectGender("Male")
-//                .enterDateOfBirth("10 May 1990")
+                .selectGender("Male")
+                .enterDateOfBirth("10 May 1990")
 //                .addSubject(new String[]{"English","Maths"})
 //                .selectHobbies(new String[]{"Music","Sports"})
 //                .uploadFile("src/images/candles-9247498_1280.jpg")
